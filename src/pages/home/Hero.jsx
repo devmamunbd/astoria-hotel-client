@@ -14,11 +14,11 @@ import Img4 from "../../assets/banner/b4.jpg"
 
 const Hero = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-5'>
+    <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-10'>
         <div>
-            <h1 className='text-xl md:text-4xl font-bold '>Hotel With Swimmings Pool and <br /> <span className='text-green-500'>Luxury Vibes</span></h1>
+            <h1 className='text-xl md:text-2xl lg:text-4xl font-bold '>Hotel With Swimmings Pool and <br /> <span className='text-green-500'>Luxury Vibes</span></h1>
             <p className='text-sm md:text-[16px] mt-2 text-gray-500'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse et sapiente labore. Beatae corrupti itaque, veritatis repellat nobis temporibus explicabo. Inventore rerum ex mollitia vero. Excepturi quaerat debitis quibusdam corrupti?</p>
-            <div className='mt-10 flex gap-10 '>
+            <div className='mt-2 lg:mt-10 flex flex-col lg:flex-row gap-3 lg:gap-10 '>
                 <button className='bg-green-500 cursor-pointer px-12 py-2 text-white font-semibold rounded-md'>Book Now</button>
                 <button className='bg-transparent border cursor-pointer border-gray-800 px-12 py-2 text-black font-semibold rounded-md'>Learn More</button>
             </div>
