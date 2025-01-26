@@ -1,12 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router";
+import Navbar from "../components/Navbar/Navbar";
 
 const RootLayout = () => {
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-bgPrimary ">
+      <div className="flex flex-col min-h-screen bg-[#EEEEEE] ">
         <div>
-          <nav>Navbar</nav>
+          <Navbar></Navbar>
         </div>
         <div className="flex-grow">
           <Outlet />
