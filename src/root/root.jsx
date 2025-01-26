@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar/Navbar";
 const RootLayout = () => {
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-[#EEEEEE] ">
+      <div className="flex flex-col min-h-screen bg-[#f7f7f7] ">
         <div>
           <Navbar></Navbar>
         </div>
