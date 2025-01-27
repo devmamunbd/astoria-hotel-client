@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-    <header className='bg-[#FBFBFB] py-6 border-b-amber-50'>
+    <header className='bg-white py-6 border-b-amber-50'>
         <nav className='container mx-auto flex justify-between items-center px-10'>
             <Link to="/" className='text-xl md:text-2xl text-black font-bold'>Astoria <span className='text-green-500'> Hotel</span></Link>
             <ul className='md:flex hidden gap-5 lg:gap-10 items-center'>
