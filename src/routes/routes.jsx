@@ -7,6 +7,7 @@ import Service from '../pages/Service';
 import ContactUs from '../pages/ContactUs';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Login from '../pages/Login';
+import SingleBlogs from '../pages/blogs/SingleBlogs';
 
 export const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: '/blogs/:id',
+                element: <SingleBlogs></SingleBlogs>
             }
         ]
     }

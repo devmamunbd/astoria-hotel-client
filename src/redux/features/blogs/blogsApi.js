@@ -11,10 +11,12 @@ export const blogApi = createApi({
         getBlog: builder.query({
             query: ({search= '', category= '', location=''}) =>
                 `/blogs?search=${search}&category=${category}&location=${location}`
-
+        }),
+        getSingleBlogById: builder.query({
+            query: (id) => `/blogs/${id}`
         })
     })
 })
 
 
-export const {useGetBlogQuery} = blogApi;
+export const {useGetBlogQuery, useGetSingleBlogByIdQuery} = blogApi;
