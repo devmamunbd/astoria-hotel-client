@@ -18,7 +18,7 @@ const BlogsSearch = ({search, handleSearchChange, handleSearch}) => {
         type="search" name="" id=""
         placeholder='Search Hotel Rooms'/>
 
-        <button className='bg-green-500 px-12 py-2 text-white rounded-md font-semibold cursor-pointer'>Search</button>
+        <button onClick={handleSearch} className='bg-green-500 px-12 py-2 text-white rounded-md font-semibold cursor-pointer'>Search</button>
     </div>
   )
 }

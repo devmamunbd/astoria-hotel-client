@@ -14,9 +14,12 @@ export const blogApi = createApi({
         }),
         getSingleBlogById: builder.query({
             query: (id) => `/blogs/${id}`
-        })
+        }),
+        getRelatedBlogsById: builder.query({
+            query: (id) => `/blogs/related/${id}`
+        }),
     })
 })
 
 
-export const {useGetBlogQuery, useGetSingleBlogByIdQuery} = blogApi;
+export const {useGetBlogQuery, useGetSingleBlogByIdQuery, useGetRelatedBlogsByIdQuery} = blogApi;
