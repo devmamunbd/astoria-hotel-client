@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router';
 
 const Login = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
   return (
     <div className='bg-white p-8 shadow-md rounded-md max-w-sm mx-auto mt-20'>
@@ -12,10 +14,12 @@ const Login = () => {
             >
                     <input type="email" name="" id=""
                     placeholder='Enter Email'
+                    value={email}
                     className='w-full focus:outline-none px-5 py-3 bg-gray-100 rounded-md'
                     />
                     <input type="password" name="" id=""
                     placeholder='Enter Password'
+                    value={password}
                     className='w-full focus:outline-none px-5 py-3 bg-gray-100 rounded-md'
                     />
                     {
@@ -25,7 +29,7 @@ const Login = () => {
                     className='w-full bg-black text-white font-semibold px-5 py-3 rounded-md'
                     >Login</button>
             </form>
-            <p className='mt-2'>Don't have an account? <Link className='text-blue-500 underline'>Please Register</Link></p>
+            <p className='mt-2'>Don't have an account? <Link to="/register" className='text-blue-500 underline'>Please Register</Link></p>
         </div>
     </div>
   )

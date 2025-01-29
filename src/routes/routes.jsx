@@ -8,6 +8,7 @@ import ContactUs from '../pages/ContactUs';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Login from '../pages/Login';
 import SingleBlogs from '../pages/blogs/SingleBlogs';
+import Register from '../pages/home/Register';
 
 export const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
             {
                 path: '/blogs/:id',
                 element: <SingleBlogs></SingleBlogs>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
         ]
     }
