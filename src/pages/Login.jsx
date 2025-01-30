@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { useForm } from "react-hook-form"
+import { useLoginUserMutation } from '../redux/features/auth/authApi';
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
+    const [loginUser, {isLoading}] = useLoginUserMutation()
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit,
@@ -13,9 +16,16 @@ const Login = () => {
         formState: { errors },
       } = useForm()
 
-      const onSubmit = (data) => {
+      const onSubmit = async (data) => {
         console.log(data)
-        // setMessage('Logged in successfully')
+        try {
+            const response = await loginUser(data).unwrap();
+            console.log(response)
+            navigate('/')
+            setMessage('')
+        } catch (error) {
+            setMessage("Please Provide Valid Email and Password", error.message)
+        }
       }
   return (
     <div className='bg-white p-8 shadow-md rounded-md max-w-sm mx-auto mt-20'>
@@ -42,6 +52,7 @@ const Login = () => {
                         message && <p className='text-red-500'>{message}</p>
                     }
                     <button type="submit"
+                    disabled={isLoading}
                     className='w-full bg-black text-white font-semibold px-5 py-3 rounded-md cursor-pointer'
                     >Login</button>
             </form>
